@@ -10,3 +10,13 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+puts "Enter a store name"
+@selected_store = gets.chomp
+
+store = Store.create(name: "#{@selected_store}")
+if store.save
+  puts "Record saved successfully!"
+elsif
+  puts store.errors.full_messages
+end
